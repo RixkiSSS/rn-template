@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ScrollView, View, Text, Button} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
 const HomeScreen = ({navigation}) => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic">
       <View>
